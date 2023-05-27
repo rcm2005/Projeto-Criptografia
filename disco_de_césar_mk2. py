@@ -1,0 +1,81 @@
+import math
+
+
+def codificar():
+
+     escolha = int(input("deseja usar uma chave padrão ou enimga ?:\n 1 - Padrão \n 2 - Enigma "))
+     
+     if escolha == 1:
+          palavra = input("Digite a mensagem (não use espaço ou acentos): ")
+          chave = int(input('digite a chave do codigo: '))
+
+
+          letra = list(palavra) 
+          palavracrypto = []
+
+          alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+          for o in range (len(letra)):
+               convert = letra[o]
+               posicaocyp = 0
+               posicaoori = 0
+               for i in range(len(alfabeto)):
+                    if letra[o] == alfabeto[i]:
+                         posicaocyp = i + chave
+                         posicaoori = i 
+                         converted = alfabeto[posicaocyp]
+                         palavracrypto.append(converted)
+          print(palavracrypto)
+
+     elif escolha == 2:
+
+          palavra = input("Digite a mensagem (não use espaço ou acentos): ")
+          chave = int(input('digite a chave do codigo (sem espaços, maximo 4 digitos): '))
+
+          milhar = chave//1000
+          restom = chave %1000
+          centena = restom//100
+          restoc = restom%100
+          dezena = restoc // 10
+          unidade = restoc %10
+
+          chaveiro = [milhar, centena, dezena, unidade]
+
+          letra = list(palavra) 
+
+          
+          palavracrypto = []
+
+          alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+          c = 0
+          andamento = 0 #definindo variavel que indica quantas casas nós giramos no disco
+          for o in range(len(letra)):
+               convert = letra[o]  #a letra que vai ser convertida agora
+               posicaocyp = 0 #armazenar a posição da nossa letra traduzida na cifra
+               posicaoori = 0 #armazenar a posição origina da nossa letra no alfabeto
+               
+               lenghtchaveiro = len(chaveiro)
+            
+                    
+               casas = chaveiro [c] #definindo quantas casas serão andadas
+               for i in range(len(alfabeto)):#definindo a letra i como as posições do alfabeto
+                    if letra[o] == alfabeto[i]:#encontrando a posição da nossa letra dentro do alfabeto
+                         andamento += casas % len(alfabeto)
+                         posicaocyp = (i + andamento) % len(alfabeto) #definindo a posição da letra convertida dentro da cifra
+                         posicaoori = i #apenas para orientar onde estaria a letra sem converter no alfabeto normal
+                         converted = alfabeto[posicaocyp]#definindo a letra convertida dentro da cifra
+                         palavracrypto.append(converted) #adicionando a letra a lista de letras que compõe a palavra criptografada
+                         c = (c + 1) % len(chaveiro)
+                         if c == 0:
+                              andamento = 0
+                         break
+                    
+                              
+          
+
+     return palavracrypto
+
+resultado = codificar()
+print(resultado)
+
+    
