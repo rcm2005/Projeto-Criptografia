@@ -3,7 +3,7 @@ import math
 
 def codificar():
 
-     escolha = int(input("deseja usar uma chave padrão ou enimga ?:\n 1 - Padrão \n 2 - Enigma "))
+     escolha = int(input("deseja usar uma chave padrão ou enimga ?:\n 1 - Padrão \n 2 - Enigma \n "))
      
      if escolha == 1:
           palavra = input("Digite a mensagem (não use espaço ou acentos): ")
