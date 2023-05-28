@@ -13,10 +13,13 @@ def codificar():
           letra = list(palavra) 
           palavracrypto = []
 
+               
+               
           alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'ç', ',', '.', '0', '1', '*']
           
           for o in range (len(letra)):
-
+               if letra[o] == ' ':
+                    palavracrypto.append(' ')
                convert = letra[o]
                posicaocyp = 0
                posicaoori = 0
@@ -26,11 +29,16 @@ def codificar():
                          posicaoori = i 
                          converted = alfabeto[posicaocyp]
                          palavracrypto.append(converted)
-          print(palavracrypto)
+          
+          
+          frasecrypto = "" #adicionando variável que armazenará a frase concatenada após a encodificação
+              
+          for p in range(len(palavracrypto)):
+              frasecrypto += palavracrypto[p]
 
      elif escolha == 2:
 
-          palavra = input("Digite a mensagem (não use espaço ou acentos): ")
+          palavra = input("Digite a mensagem (não use acentos): ")
           chave = int(input('digite a chave do codigo (sem espaços, maximo 4 digitos): '))
           espaco = (int(input("deseja mostrar espaços entre as palavras criptografadas ? :\n 1 - sim \n 2 - não\n")))
           
