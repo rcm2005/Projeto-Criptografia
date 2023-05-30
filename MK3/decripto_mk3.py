@@ -18,7 +18,10 @@ def descripto():
     
     palavradescrypto = []
 
-    alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'ç', ',', '.', '0', '1', '*']
+
+    alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'ç', ',', '.', '0', '1', '*', 'á', 'é', 'í', 'ó', 'ú', 'ã', 'õ', 'â', 'ê', 'î', 'ô', 'û', 'à']  
+    
+    
     c = 0
     
     
@@ -51,7 +54,7 @@ def descripto():
                 break
     
     frasedecrypto = "" #adicionando variável que armazenará a frase concatenada após a encodificação
-        
+         
     for p in range(len(palavradescrypto)):
         frasedecrypto += palavradescrypto[p]
             

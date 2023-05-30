@@ -3,8 +3,7 @@ import math
 
 def codificar():
 
-
-    palavra = input("Digite a mensagem (não use acentos): ")
+    palavra = input("Digite a mensagem: ")
     chave = int(input('digite a chave do codigo (sem espaços, maximo 4 digitos): '))
     espaco = (int(input("deseja mostrar espaços entre as palavras criptografadas ? :\n 1 - sim \n 2 - não\n")))
     
@@ -29,7 +28,8 @@ def codificar():
     
     palavracrypto = []
 
-    alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'ç', ',', '.', '0', '1', '*']
+    alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'ç', ',', '.', '0', '1', '*', 'á', 'é', 'í', 'ó', 'ú', 'ã', 'õ', 'â', 'ê', 'î', 'ô', 'û', 'à']  
+    
     c = 0
     
     
