@@ -12,7 +12,7 @@ def codificar():
         palavra = input("Digite a mensagem: ")
         chave = int(input('digite a chave do codigo (sem espaços, maximo 4 digitos): '))
 
-        if chave > 0 or chave < 999999:
+        if chave < 0 or chave > 999999:
             raise TypeError
     
     except TypeError:
