@@ -1,6 +1,6 @@
 import math
 
-
+ 
 def codificar():
 
     print('************************************')

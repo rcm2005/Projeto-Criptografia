@@ -8,15 +8,16 @@ def codificar():
     print('************************************')
     print('Seja bem vindo ao disco de césar MK4')
     print('************************************')
-    try:
-        palavra = input("Digite a mensagem: ")
+    
+    palavra = input("Digite a mensagem: ")
+    try:    
         chave = int(input('digite a chave do codigo (sem espaços, maximo 4 digitos): '))
 
         if chave < 0 or chave > 999999:
             raise TypeError
     
-    except TypeError:
-        print('Por favor digite uma chave válida !')
+    # except TypeError:
+    #     print('Por favor digite uma chave válida !')
     except ValueError: 
         print('Por favor, digite uma resposta válida')
      
