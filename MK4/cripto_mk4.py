@@ -8,7 +8,7 @@ def codificar():
     print('************************************')
     
     palavra = input("Digite a mensagem: ")
-    chave = int(input('digite a chave do codigo (sem espaços, maximo 4 digitos): '))
+    chave = int(input('digite a chave do codigo (sem espaços, maximo 6 digitos): '))
     espaco = (int(input("deseja mostrar espaços entre as palavras criptografadas ? :\n 1 - sim \n 2 - não\n")))
     
     cemk = chave // 100000

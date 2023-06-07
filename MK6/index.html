@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class = 'nav'>
+                <li id="pagc"><a href="index.html">Cripto</a></li>
+                <li id="pagd"><a href="decripto.html">Decripto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="intro">Seja bem vindo ao site da cifra rafaelística versão MK6</h1>
+
+    <div class="programa">
+        <p>Digite a mensagem</p>
+        <br>
+        <input type="text" placeholder="mensagem" id="msg">
+        <br>
+        <br>
+        <p>Digite uma chave</p>
+        <input type="number" placeholder="maximo 6 digitos" id="chave">
+        <br>
+        <br>
+        <p>Quer exibir espaços na mensagem ?</p>
+        <input type="number" placeholder=" 1- sim 2- não" id="espaco">
+        <br>
+        <br>
+        <button onclick="cripto()" id="prog">Cripto</button>
+    </div>
+
+</body>
+</html>
