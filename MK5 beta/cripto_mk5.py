@@ -4,11 +4,11 @@ import math
 def codificar():
 
     print('************************************')
-    print('Seja bem vindo ao disco de césar MK4')
+    print('Seja bem vindo ao disco de césar MK5')
     print('************************************')
     
     palavra = input("Digite a mensagem: ")
-    chave = input('digite a chave do codigo (sem espaços, maximo 6 digitos): ')
+    chave = input('digite a chave do codigo: ')
     espaco = (int(input("deseja mostrar espaços entre as palavras criptografadas ? :\n 1 - sim \n 2 - não\n")))
     
     chaveiro = list(chave)
