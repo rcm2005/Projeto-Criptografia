@@ -4,7 +4,7 @@ import math
 def codificar():
 
     print('************************************')
-    print('Seja bem vindo ao disco de césar MK5')
+    print('Seja bem vindo ao disco de césar MK7')
     print('************************************')
     
     palavra = input("Digite a mensagem: ")
@@ -14,6 +14,29 @@ def codificar():
     chaveiro = list(chave)
 
 
+    for u in range (len(chaveiro)):
+        if chaveiro[u] == "a" or "b" or "u":
+            chaveiro[u] = 1
+        elif chaveiro[u] == "c" or "d" or "v":
+            chaveiro[u] = 2
+        elif chaveiro[u] == "e" or "f" or "w":
+            chaveiro[u] = 3
+        elif chaveiro[u] == 'g' or 'h' or 'x':
+            chaveiro[u] = 4
+        elif chaveiro[u] == 'i' or 'j' or 'y':
+            chaveiro[u] = 5
+        elif chaveiro[u] == 'k' or 'l' or 'z':
+            chaveiro[u] = 6
+        elif chaveiro[u] == 'm' or 'n' or 'ç': 
+            chaveiro[u] = 7
+        elif chaveiro[u] == 'o' or 'p':
+            chaveiro[u] = 8
+        elif chaveiro[u] == 'q' or 'r':
+            chaveiro[u] = 9
+        elif chaveiro[u] == 's' or 't':
+            chaveiro[u] = 0
+            
+    
     for s in range (len(chaveiro)):
         chaveiro[s] = int(chaveiro[s])
 

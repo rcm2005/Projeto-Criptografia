@@ -19,7 +19,7 @@ header nav ul{
     display: flex;
     /* justify-content: space-between; */
     gap: 100px;
-    margin-left: 31%;
+    margin-left: 70vh;
     
 }
 header nav ul li a{
@@ -40,7 +40,7 @@ li{
     list-style: none;
 }
 .intro{
-    margin-left: 210px;
+    margin-left: 50vh;
     color: black;
 }
 
@@ -58,4 +58,34 @@ li{
 
 #chave{
     width: 115px;
+}
+
+#prog{
+    width: 100px;
+    height: 70px;
+    background:linear-gradient(to right,#0b8770, black );
+    color:white;
+    font-size: 17px;
+}
+
+#prog:hover{
+    width: 100px;
+    height: 70px;
+    font-size: 17px;
+    background:linear-gradient(to right,lime, black );
+    color: white;
+
+    
+}
+#prog:active{
+    width: 100px;
+    height: 70px;
+    font-size: 17px;
+    background:white;
+    color: black;
+}
+
+.footer{
+    width: 100vh;
+    height: 40px;
 }
