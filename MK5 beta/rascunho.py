@@ -1,15 +1,34 @@
 import math
 
- 
+
 def codificar():
 
+  
+    
     print('************************************')
     print('Seja bem vindo ao disco de césar MK4')
     print('************************************')
     
     palavra = input("Digite a mensagem: ")
-    chave = int(input('digite a chave do codigo (sem espaços, maximo 6 digitos): '))
-    espaco = (int(input("deseja mostrar espaços entre as palavras criptografadas ? :\n 1 - sim \n 2 - não\n")))
+    try:    
+        chave = int(input('digite a chave do codigo (sem espaços, maximo 4 digitos): '))
+
+        if chave < 0 or chave > 999999:
+            raise TypeError
+    
+    # except TypeError:
+    #     print('Por favor digite uma chave válida !')
+    except ValueError: 
+        print('Por favor, digite uma resposta válida')
+     
+    try:   
+        espaco = (int(input("deseja mostrar espaços entre as palavras criptografadas ? :\n 1 - sim \n 2 - não\n")))
+        
+        if espaco != 1 or espaco != 2:
+            raise ValueError
+    except ValueError:
+        print("por favor digite um valor válido")
+        
     
     cemk = chave // 100000
     restocemk = chave % 100000
@@ -79,6 +98,9 @@ def codificar():
     
 
     return frasecrypto
+    
+
+        
 
 resultado = codificar()
 print(resultado)

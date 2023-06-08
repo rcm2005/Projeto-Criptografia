@@ -2,21 +2,15 @@ import math
 
 def descripto():
     palavra = input("Digite a mensagem que gostaria de decodificar: ")
-    chave = int(input("Digite a chave da codigo: "))
+    chave = input("Digite a chave da codigo: ")
 
-    cemk = chave // 100000
-    restocemk = chave % 100000
-    dezk = restocemk // 10000
-    restodezk = restocemk % 10000
-    milhar = restodezk//1000
-    restom = restodezk %1000
-    centena = restom//100
-    restoc = restom%100
-    dezena = restoc // 10
-    unidade = restoc %10
+    chaveiro = list(chave)
 
-    chaveiro = [cemk, dezk, milhar, centena, dezena, unidade]
 
+    for s in range (len(chaveiro)):
+        chaveiro[s] = int(chaveiro[s])
+
+    
     mensagem = list(palavra) 
 
     
