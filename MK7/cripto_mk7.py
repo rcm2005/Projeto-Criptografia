@@ -8,7 +8,7 @@ def codificar():
     print('************************************')
     
     palavra = input("Digite a mensagem: ")
-    chave = input('digite a chave do codigo: ')
+    chave = input('digite a chave do codigo (numeros e letras minusculas): ')
     espaco = (int(input("deseja mostrar espaços entre as palavras criptografadas ? :\n 1 - sim \n 2 - não\n")))
     
     chaveiro = list(chave)
