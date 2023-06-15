@@ -105,7 +105,7 @@ function cripto(){
 
 function decripto(){
     var palavra = getElementById('msgcy');
-    var chave = getElementById('chavedecry');
+    var chave = getElementById('chavecry');
 
     var chaveiro = [];
 
