@@ -63,7 +63,8 @@ def codificar():
         convert = mensagem[o]  #a letra que vai ser convertida agora
         posicaocyp = 0 #armazenar a posição da nossa letra traduzida na cifra
         posicaoori = 0 #armazenar a posição origina da nossa letra no alfabeto
-        
+    
+    
         lenghtchaveiro = len(chaveiro)
     
             
