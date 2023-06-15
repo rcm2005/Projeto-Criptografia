@@ -104,8 +104,8 @@ function cripto(){
 
 
 function decripto(){
-    var palavra = getElementById('msgcy');
-    var chave = getElementById('chavecry');
+    var palavra = document.getElementById('msgcy').value;
+    var chave = document.getElementById('chavecry').value;
 
     var chaveiro = [];
 
@@ -123,35 +123,36 @@ function decripto(){
 
     var andamento = 0;
     
-    for(o = 0; o > mensagem.length; o++){
+    for(var o = 0; o < mensagem.length; o++){
         var deconvert = mensagem[o];
         var posicaocyp = 0;
         var posicaoori = 0;
 
-        casas = chaveiro[c]
+        var casas = chaveiro[c]
     
-        if(mensagem[o == ' ']){
+        if(mensagem[o] == ' '){
             palavradescrypto.push(' ');
             continue;
         }
 
-        for(a = 0; a < alfabeto.lenght; a++){
-            if(mensagem[o] == alfabeto[a])
-                andamento += casas % alfabeto.lenght;
-                posicaoori = (((i - andamento) + alfabeto.length) %alfabeto.length);
+        for(a = 0; a < alfabeto.length; a++){
+            if(mensagem[o] == alfabeto[a]){
+                andamento += casas % alfabeto.length;
+                posicaoori = (((a - andamento) + alfabeto.length) %alfabeto.length);
                 converted = alfabeto[posicaoori];
                 palavradescrypto.push(converted);
-                c = (c + 1) % chaveiro.lenght
+                c = (c + 1) % chaveiro.length;
                 if(c == 0){
-                    andamento = 0
+                    andamento = 0;
                 }
             }
-    }
+        }
+        }
 
-    frasedescrypto = palavracrypto.join('')
+    frasedescrypto = palavradescrypto.join('')
 
 
-    let frase = document.getElementById('decifrada')
+    let frase = document.getElementById("decifrada")
     frase.innerHTML = frasedescrypto
 
 
