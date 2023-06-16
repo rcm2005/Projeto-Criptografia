@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cripto</title>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class = 'nav'>
+                <li id="pagc"><a href="cripto.html">Cripto</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="introd">
+    <h1 class="intro">Seja bem vindo ao site da cifra rafaelística versão MK6</h1>
+    </div>
+    <div class="programa">
+        <p id="cifrada"> mensagem</p>
+        <p>Digite a mensagem</p>
+        <br>
+        <input type="text" placeholder="mensagem" id="msg">
+        <br>
+        <br>
+        <p>Digite uma chave</p>
+        <input type="number" placeholder="chave" id="chave">
+        <br>
+        <br>
+        <p>Quer exibir espaços na mensagem ?</p>
+        <input type="number" placeholder=" 1- sim 2- não" id="espaco">
+        <br>
+        <br>
+        <button onpointerover = "cripto()" id="prog">Cripto</button>
+    </div>
+
+    <style>
+        body{
+            background-color: #a6c288;
+            width: 100%;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        
+        header{
+            background-color: #0b8770;
+            margin: 40px;
+        }
+        
+        .nav{
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        
+        header nav ul{
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+
+            
+        }
+        header nav ul li a{
+            padding: 4px;
+            color: black;
+            text-decoration: none;
+            list-style-type: none;
+            font-size: 40px;
+        }
+        
+        header nav ul li a:hover{
+            color: bisque;
+            
+        
+        }
+        
+        li{
+            list-style: none;
+        }
+        .intro{
+            
+            color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .introd{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            justify-items: center;
+            padding-left: 5vh;
+        }
+        .programa{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        
+        #msg{
+            width: 200px;
+            height: 20px;
+        }
+        
+        #chave{
+            width: 115px;
+        }
+        
+        #prog{
+            width: 100px;
+            height: 70px;
+            background:linear-gradient(to right,#0b8770, black );
+            color:white;
+            font-size: 17px;
+        }
+        
+        #prog:hover{
+            width: 100px;
+            height: 70px;
+            font-size: 17px;
+            background:linear-gradient(to right,lime, black );
+            color: white;
+        
+            
+        }
+        #prog:active{
+            width: 100px;
+            height: 70px;
+            font-size: 17px;
+            background:white;
+            color: black;
+        }
+        
+        .footer{
+            width: 100vh;
+            height: 40px;
+        }
+    </style>
+    <script>function cripto(){
+        var palavra = document.getElementById('msg').value;
+        var chave = document.getElementById('chave').value; //adicionando variaveis que vão receber os valores oriundos do codigo html
+        var espaco = document.getElementById('espaco').value;
+    
+        if (espaco != '1' && espaco != '2' ){
+            alert("Por favor preencha todos os campos spc");
+        }// fazendo verificações para identificar se todos os campos estão preenchidos e com digitos válidos
+        if (palavra === ''){
+            alert("Por favor, digite uma mensagem msg");
+        }
+        if (chave === 0 || isNaN(chave)){
+            alert("Por favor, digite uma chave válida");
+        }
+    
+        var chaveiro = [];
+    //definindo uma variável chaveiro para armazenar os valores contidos na chave
+        for (let i = 0; i < chave.length; i++){
+            chaveiro.push(parseInt(chave.charAt(i)));        //varrendo todos os digitos da chave
+        }
+    
+        // for(let u = 0; u < chaveiro.leng; u++){
+        //     if (chaveiro.charAt(u) == "a" || "á" || "à" || "ã" || "â" || "A" || "Á" || "À" || "b" || "B" || "U" || "" ){
+    
+        //     }
+        // }
+        
+        var mensagem = palavra.split('');
+    
+        // if (espaco == '2'){
+        //     for (e = 0; e < mensagem.length; e++){
+        //         var element = " ";
+        //         if (mensagem[e] == element){
+        //             mensagem.splice(e, 1);
+        //         }else{
+        //             e++;
+        //         }
+        //     }
+            
+    
+        // }
+        if (espaco === '2') {
+            mensagem = mensagem.filter(function (elemento) {
+              return elemento !== ' ';
+            });
+        }
+        var palavracrypto = [];
+        
+        var alfabeto = ['A', 'a', 'B', '0', 'b', 'C', '1', 'c', 'D', '2', 'd', 'E', '3', 'e', 'F', '4', 'f', 'G', '5', 'g', 'H', '6', 'h', 'I', '7', 'i', 'J', '8', 'j', 'K', '9', 'k', 'L', 'l', 'M', 'm', 'N', 'n', 'O', 'o', 'P', 'p', 'Q', 'q', 'R', 'r', 'S', 's', 'T', 't', 'U', 'u', 'V', 'v', 'W', 'w', 'X', 'x', 'Y', 'y', 'Z', 'z', 'Ç', 'ç', ',', '.', '*', 'Á', 'á', 'É', 'é', 'Í', 'í', 'Ó', 'ó', 'Ú', 'ú', 'Ã', 'ã', 'Õ', 'õ', 'Â', 'â', 'Ê', 'ê', 'Î', 'î', 'Ô', 'ô', 'Û', 'û', 'À', 'à'];
+    
+    
+        var c = 0;
+    
+        var andamento = 0;
+        for(let o = 0; o < mensagem.length; o++){
+            let convert = mensagem[o];
+            let posicaocyp = 0;
+    
+            var lenghtchaveiro = chaveiro.length;
+    
+            var casas = Number(chaveiro[c]);
+    
+            if (espaco === '1'){
+                if(mensagem[o] == ' '){
+                    palavracrypto.push(' ');
+                    continue;
+                }
+    
+            }
+            
+            for(let i = 0; i < alfabeto.length; i++){
+                if(mensagem[o] === alfabeto[i]){
+                    andamento += casas % alfabeto.length;
+                    posicaocyp = (i + andamento) % alfabeto.length;
+                    var converted = alfabeto[posicaocyp];
+                    palavracrypto.push(converted);
+                    c = (c + 1) % chaveiro.length;
+                    if (c === 0){
+                        andamento = 0;
+                    }
+                }
+            }
+       
+       
+       
+       
+       
+       
+        }
+    
+        
+    
+        // for (n = 0; n < palavracrypto.length; n++){
+        //     frasecrypto += palavracrypto.charAt(p);
+        // }
+    
+        var frasecrypto = palavracrypto.join('');
+        let frase = document.getElementById("cifrada");
+    
+        frase.innerHTML = frasecrypto;
+    
+    
+    }
+    
+    
+    function decripto(){
+        var palavra = document.getElementById('msg').value;
+        var chave = document.getElementById('chave').value;
+    
+        var chaveiro = [];
+    
+        for(i =0; i < chave.length; i++){
+            chaveiro.push(parseInt(chave.charAt(i)));
+        }
+    
+        var mensagem = palavra.split('');
+    
+        var palavradescrypto = [];
+    
+        alfabeto = ['A', 'a', 'B', '0', 'b', 'C', '1', 'c', 'D', '2', 'd', 'E', '3', 'e', 'F', '4', 'f', 'G', '5', 'g', 'H', '6', 'h', 'I', '7', 'i', 'J', '8', 'j', 'K', '9', 'k', 'L', 'l', 'M', 'm', 'N', 'n', 'O', 'o', 'P', 'p', 'Q', 'q', 'R', 'r', 'S', 's', 'T', 't', 'U', 'u', 'V', 'v', 'W', 'w', 'X', 'x', 'Y', 'y', 'Z', 'z', 'Ç', 'ç', ',', '.', '*', 'Á', 'á', 'É', 'é', 'Í', 'í', 'Ó', 'ó', 'Ú', 'ú', 'Ã', 'ã', 'Õ', 'õ', 'Â', 'â', 'Ê', 'ê', 'Î', 'î', 'Ô', 'ô', 'Û', 'û', 'À', 'à'];
+    
+        var c = 0;
+    
+        var andamento = 0;
+        
+        for(var o = 0; o < mensagem.length; o++){
+            var deconvert = mensagem[o];
+            var posicaocyp = 0;
+            var posicaoori = 0;
+    
+            var casas = chaveiro[c]
+        
+            if(mensagem[o] == ' '){
+                palavradescrypto.push(' ');
+                continue;
+            }
+    
+            for(a = 0; a < alfabeto.length; a++){
+                if(mensagem[o] == alfabeto[a]){
+                    andamento += casas % alfabeto.length;
+                    posicaoori = (((a - andamento) + alfabeto.length) %alfabeto.length);
+                    converted = alfabeto[posicaoori];
+                    palavradescrypto.push(converted);
+                    c = (c + 1) % chaveiro.length;
+                    if(c == 0){
+                        andamento = 0;
+                    }
+                }
+            }
+            }
+    
+        frasedescrypto = palavradescrypto.join('')
+    
+    
+        let frase = document.getElementById("cifrada")
+        frase.innerHTML = frasedescrypto
+    
+    
+    
+    
+    }</script>
+</body>
+</html>

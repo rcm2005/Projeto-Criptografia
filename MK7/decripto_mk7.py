@@ -6,28 +6,24 @@ def descripto():
 
     chaveiro = list(chave)
 
-    for u in range (len(chaveiro)):
-        if chaveiro[u] == "a" or "b" or "u":
-            chaveiro[u] = 1
-        elif chaveiro[u] == "c" or "d" or "v":
-            chaveiro[u] = 2
-        elif chaveiro[u] == "e" or "f" or "w":
-            chaveiro[u] = 3
-        elif chaveiro[u] == 'g' or 'h' or 'x':
-            chaveiro[u] = 4
-        elif chaveiro[u] == 'i' or 'j' or 'y':
-            chaveiro[u] = 5
-        elif chaveiro[u] == 'k' or 'l' or 'z':
-            chaveiro[u] = 6
-        elif chaveiro[u] == 'm' or 'n' or 'ç': 
-            chaveiro[u] = 7
-        elif chaveiro[u] == 'o' or 'p':
-            chaveiro[u] = 8
-        elif chaveiro[u] == 'q' or 'r':
-            chaveiro[u] = 9
-        elif chaveiro[u] == 's' or 't':
-            chaveiro[u] = 0
-            
+    mapping = {
+        'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8, 'I': 9, 'J': 0,
+        'K': 1, 'L': 2, 'M': 3, 'N': 4, 'O': 5, 'P': 6, 'Q': 7, 'R': 8, 'S': 9, 'T': 0,
+        'U': 1, 'V': 2, 'W': 3, 'X': 4, 'Y': 5, 'Z': 6, 'Ç': 7, 'a': 8, 'b': 9, 'c': 0,
+        'd': 1, 'e': 2, 'f': 3, 'g': 4, 'h': 5, 'i': 6, 'j': 7, 'k': 8, 'l': 9, 'm': 0,
+        'n': 1, 'o': 2, 'p': 3, 'q': 4, 'r': 5, 's': 6, 't': 7, 'u': 8, 'v': 9, 'w': 0,
+        'x': 1, 'y': 2, 'z': 3, 'Ç': 4, 'ç': 5, ',': 6, '.': 7, '*': 8, 'Á': 9, 'á': 0,
+        'É': 1, 'é': 2, 'Í': 3, 'í': 4, 'Ó': 5, 'ó': 6, 'Ú': 7, 'ú': 8, 'Ã': 9, 'ã': 0,
+        'Õ': 1, 'õ': 2, 'Â': 3, 'â': 4, 'Ê': 5, 'ê': 6, 'Î': 7, 'î': 8, 'Ô': 9, 'ô': 0,
+        'Û': 1, 'û': 2, 'À': 3, 'à': 4
+    }
+
+    chaveiro = list(map(lambda x: mapping.get(x, x), chaveiro))
+    
+    element = ' '
+    while element in chaveiro:
+        chaveiro.remove(element)
+
     for s in range (len(chaveiro)):
         chaveiro[s] = int(chaveiro[s])
 
