@@ -204,24 +204,48 @@ def codificar():
     cont = 0
     som = 0
     for i in range(len(chaveiro)):
-        cont +=1
-        soma += chaveiro[i]
+        cont += 1
+        som += chaveiro[i]
         if cont == 11:
             chavesub.append(som)
             cont = 0
             som = 0 
 
     for i in range(len(palavracrypto)):
-         for m in range(alfabetomensagem):
+         for m in range(len(alfabetomensagem)):
               if palavracrypto[i] == alfabetomensagem[m]:
                 posicaosub.append(alfabetomensagem[m])               
 
 
-    # for s in range(len(posicaosub)):
+    parametrosmsg = []
+    parametroschav = []
+
+    for s in range(len(posicaosub)):
+        for i in range(len(alfabetomensagem)):
+            if posicaosub[s] == alfabetomensagem[i]:
+                parametrosmsg.append(i)
+            # for m in range(len(alfabetomensagem)):
+            #     final = 
+
+
+    for s in range(len(chavesub)):
+        for i in range(len(alfabetochave)):
+            if chavesub[s] == alfabetochave[i]:
+                parametroschav.append(i)
+
+    final = []
+
+    for c in range(len(parametroschav)):
+        for m in range(len(parametrosmsg)):
+            foic = parametroschav[c]
+            foim = parametrosmsg[m]
+            letra = vigenere_table[foic][foim]
+            final.append(letra)
+
 
             
 
-    return frasecrypto
+    return final
 
 resultado = codificar()
 print(resultado)
