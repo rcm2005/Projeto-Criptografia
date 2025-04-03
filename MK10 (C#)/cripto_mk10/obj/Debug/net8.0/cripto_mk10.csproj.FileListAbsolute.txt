@@ -1,0 +1,15 @@
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\obj\Debug\net8.0\cripto_mk10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\obj\Debug\net8.0\cripto_mk10.AssemblyInfoInputs.cache
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\obj\Debug\net8.0\cripto_mk10.AssemblyInfo.cs
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\obj\Debug\net8.0\cripto_mk10.csproj.CoreCompileInputs.cache
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\obj\Debug\net8.0\cripto_mk10.sourcelink.json
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\bin\Debug\net8.0\cripto_mk10.exe
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\bin\Debug\net8.0\cripto_mk10.deps.json
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\bin\Debug\net8.0\cripto_mk10.runtimeconfig.json
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\bin\Debug\net8.0\cripto_mk10.dll
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\bin\Debug\net8.0\cripto_mk10.pdb
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\obj\Debug\net8.0\cripto_mk10.dll
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\obj\Debug\net8.0\refint\cripto_mk10.dll
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\obj\Debug\net8.0\cripto_mk10.pdb
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\obj\Debug\net8.0\cripto_mk10.genruntimeconfig.cache
+C:\Users\rcm20\Desktop\Projeto-Criptografia\MK10 (C#)\cripto_mk10\obj\Debug\net8.0\ref\cripto_mk10.dll
