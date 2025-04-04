@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\rcm20\\.nuget\\packages\\": {}
+    "/Users/rafaelmattos/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rcm20\\Desktop\\Projeto-Criptografia\\MK10 (C#)\\cripto_mk10\\cripto_mk10.csproj",
+      "projectUniqueName": "/Users/rafaelmattos/Desktop/Projeto-Criptografia/MK10 (C#)/cripto_mk10/cripto_mk10.csproj",
       "projectName": "cripto_mk10",
-      "projectPath": "C:\\Users\\rcm20\\Desktop\\Projeto-Criptografia\\MK10 (C#)\\cripto_mk10\\cripto_mk10.csproj",
-      "packagesPath": "C:\\Users\\rcm20\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rcm20\\Desktop\\Projeto-Criptografia\\MK10 (C#)\\cripto_mk10\\obj\\",
+      "projectPath": "/Users/rafaelmattos/Desktop/Projeto-Criptografia/MK10 (C#)/cripto_mk10/cripto_mk10.csproj",
+      "packagesPath": "/Users/rafaelmattos/.nuget/packages/",
+      "outputPath": "/Users/rafaelmattos/Desktop/Projeto-Criptografia/MK10 (C#)/cripto_mk10/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rcm20\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/rafaelmattos/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

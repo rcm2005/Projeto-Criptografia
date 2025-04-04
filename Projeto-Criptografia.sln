@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MK10 (C#)", "MK10 (C#)", "{4BAE3AD3-4A91-7BE5-ED88-6725D5DF6FE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cripto_mk10", "MK10 (C#)\cripto_mk10\cripto_mk10.csproj", "{8E4A2D44-90B0-44CC-0564-751479F5C57A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E4A2D44-90B0-44CC-0564-751479F5C57A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E4A2D44-90B0-44CC-0564-751479F5C57A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E4A2D44-90B0-44CC-0564-751479F5C57A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E4A2D44-90B0-44CC-0564-751479F5C57A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8E4A2D44-90B0-44CC-0564-751479F5C57A} = {4BAE3AD3-4A91-7BE5-ED88-6725D5DF6FE0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70C676C7-EB30-478A-964C-B8FDEC5FD36A}
+	EndGlobalSection
+EndGlobal

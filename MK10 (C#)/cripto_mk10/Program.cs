@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Text;
+using System.Collections.Generic;
 
 class Cifrador
 {
     private string chave;
 
-    // Construtor que recebe a chave da cifragem
     public Cifrador(string chave)
     {
         this.chave = chave;
@@ -14,28 +14,48 @@ class Cifrador
     public string Cifrar(string mensagem)
     {
         StringBuilder resultado = new StringBuilder();
+        List<int> cifra_num = new List<int>();
+
+        for (int l = 0; l < chave.Length; l++)
+        {
+            cifra_num.Add((int)chave[l]);
+        }
+
+        int deslocamento = 0;
+        int contador_chave = 0;
 
         for (int i = 0; i < mensagem.Length; i++)
         {
-            
-            // Faz um deslocamento no caractere baseado na chave
-            char letra = (char)(mensagem[i] + chave[i % chave.Length]);
-            resultado.Append(letra);
+            char letraCifrada = (char)(mensagem[i] + cifra_num[contador_chave] + deslocamento);
+            resultado.Append(letraCifrada);
+
+            deslocamento += cifra_num[contador_chave];
+            contador_chave = (contador_chave + 1) % chave.Length;
         }
 
         return resultado.ToString();
     }
 
-    // Método para decifrar a mensagem
     public string Decifrar(string mensagemCifrada)
     {
         StringBuilder resultado = new StringBuilder();
+        List<int> cifra_num = new List<int>();
+
+        for (int l = 0; l < chave.Length; l++)
+        {
+            cifra_num.Add((int)chave[l]);
+        }
+
+        int deslocamento = 0;
+        int contador_posic_chave = 0;
 
         for (int i = 0; i < mensagemCifrada.Length; i++)
         {
-            // Reverte o deslocamento do caractere
-            char letra = (char)(mensagemCifrada[i] - chave[i % chave.Length]);
-            resultado.Append(letra);
+            char letracifrada = (char)((int)mensagemCifrada[i] - deslocamento - cifra_num[contador_posic_chave]);
+            resultado.Append(letracifrada);
+
+            deslocamento += cifra_num[contador_posic_chave];
+            contador_posic_chave = (contador_posic_chave + 1) % chave.Length;
         }
 
         return resultado.ToString();
